@@ -9,6 +9,7 @@ import java.util.Set;
 
 @Entity
 @Getter @Setter @NoArgsConstructor
+@Table(name = "PLAYER")
 public class Player {
 
     @Id @GeneratedValue
@@ -18,7 +19,7 @@ public class Player {
 
     private String lastName;
 
-    @OneToMany(mappedBy = "team", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "team")
     private Set<TeamMember> teams;
 
     public Player(String name, String lastName) {

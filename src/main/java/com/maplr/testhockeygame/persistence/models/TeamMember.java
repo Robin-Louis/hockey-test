@@ -8,6 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Getter @Setter @NoArgsConstructor
+@Table(name = "TEAM_MEMBER")
 public class TeamMember {
 
     @EmbeddedId

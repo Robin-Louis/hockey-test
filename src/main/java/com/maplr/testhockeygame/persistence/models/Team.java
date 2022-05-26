@@ -9,6 +9,7 @@ import java.util.Set;
 
 @Entity
 @Getter @Setter @NoArgsConstructor
+@Table(name = "TEAM")
 public class Team {
 
     @Id @GeneratedValue
@@ -18,7 +19,7 @@ public class Team {
 
     private Long year;
 
-    @OneToMany(mappedBy = "player", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "player")
     private Set<TeamMember> players;
 
     public Team(String coach, Long year) {
