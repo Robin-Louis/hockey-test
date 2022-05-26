@@ -1,0 +1,16 @@
+GET http://localhost:8080/2020
+
+###
+POST http://localhost:8080/2020
+Content-Type: application/json
+
+{
+  "number": 99,
+  "name": "Marion",
+  "lastName": "Félix",
+  "position": "forward",
+  "isCaptain": false
+}
+
+###
+PUT http://localhost:8080/captain/1
